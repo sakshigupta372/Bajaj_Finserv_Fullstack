@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000', // Update this when deployed
+  baseURL: 'https://bajaj-finserv-fullstack-47oa.onrender.com', // Update this when deployed
 });
 
 export const getTickets = async (filters = {}) => {
