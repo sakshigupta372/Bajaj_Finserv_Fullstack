@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const ticketRoutes = require('./routes/tickets');
-
+const bfhlRoutes = require('./routes/bfhl');
 const app = express();
 
 // Middleware
@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Routes
 app.use('/tickets', ticketRoutes);
-
+app.use('/bfhl', bfhlRoutes);
 // Database connection
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/deskflow';
 mongoose.connect(MONGODB_URI)
